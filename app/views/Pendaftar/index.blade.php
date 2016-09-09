@@ -83,6 +83,19 @@
 	<div class="col-md-6 col-xs-7">
 		<div class="col-md-12 col-xs-12" style="margin-bottom:4px;">
 			<a href="{{URL::route('pendaftar.users.export')}}" class="pull-right btn btn-success">Export Excel (All)</a>
+
+			<!-- Single button -->
+			<div class="btn-group pull-right">
+				<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Interview Lists <span class="caret"></span>
+				</button>
+			  	<ul class="dropdown-menu">
+				    <li><a href="{{action('InterviewController@getListPeserta', 'Shift 1 : 08.00 - 10.30')}}" target="_blank">Shift 1</a></li>
+				    <li><a href="{{action('InterviewController@getListPeserta', 'Shift 2 : 11.30 - 14.30')}}" target="_blank">Shift 2</a></li>
+				    <li><a href="{{action('InterviewController@getListPeserta', 'Shift 3 : 15.00 - 17.00')}}" target="_blank">Shift 3</a></li>
+			  	</ul>
+			</div>
+
 		</div>
 		<div class="pull-right">
 			<form class="form-inline" method="get" action="{{URL::route('pendaftar.users.wordexport')}}" class="">

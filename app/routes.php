@@ -35,3 +35,5 @@ Route::group(array('before' => 'auth'), function(){
 });
 	
 Route::controller('user', 'UsersController');
+
+Route::controller('interview', 'InterviewController');

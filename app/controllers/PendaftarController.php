@@ -119,15 +119,23 @@ class PendaftarController extends BaseController {
 					$row->setAlignment('center');
 					$row->setFontWeight('bold');
 				});
-				$sheet->row(3, array('Nim','Nama','Gender','Fakultas','Jurusan','Tempat Lahir','Tanggal Lahir','Nomor Telpon','Id Line','E-mail','Ipk','Alamat','Pengalaman Organisasi','Prestasi'));
+				$sheet->row(3, array('Nim','Nama','Gender','Fakultas','Jurusan','Tempat Lahir','Tanggal Lahir','Nomor Telpon','Id Line','E-mail','Ipk','Alamat','Pengalaman Organisasi','Prestasi', 'Jam Interview'));
 				
-				$data = Pendaftar::select('Nim','Nama','Gender','Fakultas','Jurusan','Tempat_Lahir','Ttl','Nomor_telfon','Idline','email','ipk','Alamat','Pengalaman_organisasi','Penghargaan')->get()->toArray();
-				
-				$no = 1;
+				// $data = Pendaftar::select('Nim','Nama','Gender','Fakultas','Jurusan','Tempat_Lahir','Ttl','Nomor_telfon','Idline','email','ipk','Alamat','Pengalaman_organisasi','Penghargaan')->get()->toArray();
+
+				$data = DB::table('cavis')
+					->leftjoin('interviews', 'cavis.nim', '=', 'interviews.cavis_nim')
+					->select('Nim','Nama','Gender','Fakultas','Jurusan','Tempat_Lahir','Ttl','Nomor_telfon','Idline','email','ipk','Alamat','Pengalaman_organisasi','Penghargaan', 'jam_interview')
+					->get(); //return: array of Object
+
+				$data = json_decode(json_encode($data), true); //make it array of array.
+
 				foreach($data as $data) {
+					
 					$sheet->appendRow($data);
 				}
 			});
+
     	})->download('xls');
   	}
   	
