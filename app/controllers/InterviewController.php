@@ -25,7 +25,7 @@ class InterviewController extends \BaseController {
 		$nim = Input::get('nim');
 		$cavis = DB::table('cavis')->where('nim', $nim)->first();
 		if ($cavis == null) {
-			return "";
+			return "Nim tidak ditemukan";
 		}
 		return $cavis->nama;
 	}

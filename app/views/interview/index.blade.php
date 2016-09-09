@@ -19,7 +19,7 @@
         url: "{{action('InterviewController@getName') }}",//+'/'+$('#nim').val(),
         success: function (result) {
           $('#nama').val(result);
-          if ($('#nama').val() == "") {
+          if ($('#nama').val() == "Nim tidak ditemukan") {
             $('#hide').hide('fast', function() {
               
             });
