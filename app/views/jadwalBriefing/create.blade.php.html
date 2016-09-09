@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}" crossorigin="anonymous">
+	</head>
+	<body>
+
+		<!--NAVBAR-->
+		<nav class="navbar navbar-default">
+  			<div class="container-fluid">
+ 				<!-- Brand and toggle get grouped for better mobile display -->
+    				<div class="navbar-header">
+      					<a class="navbar-brand" href="#">Pendaftar</a>
+      					<a class="navbar-brand" href="#">Edit Notes</a>
+      					<a class="navbar-brand" href="#">Jadwal Briefing</a>	
+				</div>
+					<a class="nav navbar-brand navbar-right" href="#">Logout</a>
+			</div>
+		</nav>
+
+		<!--SPACE-->
+		<div class="container-fluid">
+ 			<div class="row">
+  				<div class="col-xs-12" style=" height:100px;">
+  				</div>
+  			</div>
+		</div>
+		
+		<!--FORM-->
+		<table class="table table-striped">
+			<form class="form-horizontal">
+				<div class="form-group col-sm-11">
+  					<label class="col-sm-3 control-label"><h3>Insert Jadwal Briefing</h3></label>
+  				</div>
+
+  				<!--TANGGAL-->
+  				<div class="form-group col-sm-11">
+  					<div class="form-inline">
+  						<label for="inputEmail3" class="col-sm-2 control-label">Tanggal</label>
+    					<div class="col-sm-4">
+							<input type="date" class="form-control">
+    					</div>
+  					</div>
+  				</div>
+
+  				<!--SHIFT-->
+  				<div class="form-group col-sm-11">
+  					<label for="inputEmail3" class="col-sm-2 control-label">Shift</label>
+    				<div class="col-sm-4">
+    					<select class="form-control">
+  							<option>07.20-09.00</option>
+  							<option>09.20-11.00</option>
+  							<option>11.20-13.00</option>
+  							<option>13.20-15.00</option>
+  							<option>15.20-17.00</option>
+						</select>
+   					</div>
+  				</div>
+
+  				<!--TEMPAT-->
+  				<div class="form-group col-sm-11">
+  					<label for="inputEmail3" class="col-sm-2 control-label">Tempat</label>
+    				<div class="col-sm-4">
+    					<input type="text" class="form-control" id="inputEmail3" placeholder="">
+   					</div>
+  				</div>
+
+  				<!--KAPASITAS-->
+  				<div class="form-group col-sm-11">
+  					<label for="inputEmail3" class="col-sm-2 control-label">Kapasitas</label>
+    				<div class="col-sm-4">
+    						<input type="text" class="form-control" id="inputEmail3" placeholder="30" value="30" disabled>
+   					</div>
+  				</div>
+
+  				<!--BUTTON-->
+  				<div class="form-group col-sm-11">
+    				<div class="col-sm-4 col-md-offset-2">
+    					<button type="button" class="btn btn-primary btn-lg btn-block">Submit</button>
+   					</div>
+  				</div>
+		</form>
+	</table>
+</div>
+	</body>
+</html>

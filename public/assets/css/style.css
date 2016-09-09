@@ -1,0 +1,61 @@
+body {
+    background-color: #FFCC55; 
+}
+
+h2{
+    text-align: center; 
+}
+
+#content{
+    margin-top: 50px;
+}
+
+    /*background-color: #002957;*/
+.navbar {
+    margin-bottom: 0;
+    background-color: #002957;
+    z-index: 9999;
+    border: 1;
+    border-color: black;
+    border-radius: 0;
+    line-height: 1.42857143 !important;
+    font-size: 12px !important;
+    letter-spacing: 4px;
+
+}
+
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+
+}
+
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #002957 !important;
+    background-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #002957 !important;
+}
+
+.jumbotron { 
+    background-color: #002957; 
+    color: #ffffff;
+}
+
+.button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 8px;
+    font-size: 22px;
+    float: right;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
