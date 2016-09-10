@@ -25,9 +25,14 @@ class InterviewController extends \BaseController {
 		$nim = Input::get('nim');
 		$cavis = DB::table('cavis')->where('nim', $nim)->first();
 		if ($cavis == null) {
-			return "Nim tidak ditemukan";
+			$data['nama'] = "Nim tidak ditemukan";
+			$data['shift'] = "";
 		}
-		return $cavis->nama;
+		else{
+			$data['nama'] = $cavis->nama;
+			$data['shift'] = DB::table('interviews')->where('cavis_nim', $nim)->first()->jam_interview;
+		}
+		return $data;
 	}
 
 	public function postSave()

@@ -17,10 +17,10 @@
 
     <table class="table table-bordered table-hover">
       <tr>
-        <td>#</td>
-        <td>Nim</td>
-        <td>Nama</td>
-        <td>Jurusan</td>
+        <th>#</th>
+        <th>Nim</th>
+        <th>Nama</th>
+        <th>Jurusan</th>
       </tr>
       
       <?php $no = 1; ?>
