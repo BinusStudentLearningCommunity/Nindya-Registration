@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> -->
   <script src="{{asset('assets/js/jquery-3.1.0.min.js')}}"></script>
+  <script src="{{asset('assets/js/sweetalert.min.js')}}"></script> 
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/css/sweetalert.css')}}">
 
   <script>
   $(document).ready(function() {
@@ -58,11 +60,12 @@
         },
         url: "{{action('InterviewController@postSave') }}",
         success: function (result) {
-          console.log(result);
+          // console.log(result);
           $('#msg').text(result.message);
           $('#msg').show('fast', function() {
             
           });
+          swal("Thank you!", "Anda sudah terdaftar", "success");
         }
       }); //end ajax
 
