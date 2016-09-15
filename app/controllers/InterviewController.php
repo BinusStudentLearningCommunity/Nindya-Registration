@@ -30,7 +30,11 @@ class InterviewController extends \BaseController {
 		}
 		else{
 			$data['nama'] = $cavis->nama;
-			$data['shift'] = DB::table('interviews')->where('cavis_nim', $nim)->first()->jam_interview;
+			if (DB::table('interviews')->where('cavis_nim', $nim)->first() != null) {
+				$data['shift'] = DB::table('interviews')->where('cavis_nim', $nim)->first()->jam_interview;
+			}
+			else $data['shift'] = "";
+
 		}
 		return $data;
 	}
