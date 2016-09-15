@@ -84,5 +84,25 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 			'created_at' => '2016-07-04',
 			'updated_at' => '2016-07-04',
 		));
+
+		$faker = Faker\Factory::create();
+		for ($i=0; $i < 80; $i++) { 
+			Pendaftar::create(array(
+			  	'nim' => $faker->randomNumber(10),
+				'nama' => $faker->name,
+				'gender' => $faker->randomElement($array = array ('Laki-Laki','Perempuan')),
+				'fakultas' => 'Faculty of Economics and Communication',
+				'jurusan' => 'Accounting',
+				'tempat_lahir' => 'Jakarta',
+				'ttl' => '1997-01-16',
+				'nomor_telfon' => '08892344287',
+				'idline' => 'lutfiyusarian0107',
+				'email' => 'lutfiyusarian@gmail.com',
+				'ipk' => '3.00',
+				'alamat' => 'Jalan raya Jombang',
+				'pengalaman_organisasi' => 'MT BSLC',
+				'penghargaan' => 'Ketua Seminar'
+			));
+		}
 	}
 }

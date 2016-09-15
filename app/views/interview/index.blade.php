@@ -61,11 +61,19 @@
         url: "{{action('InterviewController@postSave') }}",
         success: function (result) {
           // console.log(result);
-          $('#msg').text(result.message);
+          $('#msg').html('<span style="color:red">'+result.message+"</span>");
           $('#msg').show('fast', function() {
             
           });
-          swal("Berhasil !", result.message, "success");
+          if(result.status == 'error'){
+            swal("Error", "Kapasitas sudah full", "error");
+          }
+          else{
+            swal("Berhasil !", result.message, "success");
+            $('#kap-shift-1').text(result.count_shift_1);
+            $('#kap-shift-2').text(result.count_shift_2);
+            $('#kap-shift-3').text(result.count_shift_3);
+          }
         }
       }); //end ajax
 
@@ -136,7 +144,7 @@
                 <td><input id="inp-radio-shift-1" type="radio" name="jam_interview" value="Shift 1 : 08.00 - 10.30"></td>
                 <td>Shift 1</td>
                 <td>Pukul 08.00 - 10.30</td>
-                <td><span id="kap-shift-1"></span>{{$data['count_shift_1']}} / 80</td>
+                <td><span id="kap-shift-1">{{$data['count_shift_1']}}</span> / 80</td>
                 <td><a href="{{action('InterviewController@getListPeserta', 'Shift 1 : 08.00 - 10.30')}}" target="_blank" class="btn btn-primary">View</a></td>
               </tr>
 
@@ -144,7 +152,7 @@
                 <td><input id="inp-radio-shift-2" type="radio" name="jam_interview" value="Shift 2 : 11.30 - 14.30"></td>
                 <td>Shift 2</td>
                 <td>Pukul 11.30 - 14.30</td>
-                <td><span id="kap-shift-2"></span>{{$data['count_shift_2']}} / 80</td>
+                <td><span id="kap-shift-2">{{$data['count_shift_2']}}</span> / 80</td>
                 <td><a href="{{action('InterviewController@getListPeserta', 'Shift 2 : 11.30 - 14.30')}}" target="_blank" class="btn btn-primary">View</a></td>
               </tr>
 
@@ -152,7 +160,7 @@
                 <td><input id="inp-radio-shift-3" type="radio" name="jam_interview" value="Shift 3 : 15.00 - 17.00"></td>
                 <td>Shift 3</td>
                 <td>Pukul 15.00 - 17.00</td>
-                <td><span id="kap-shift-3"></span>{{$data['count_shift_3']}} / 80</td>
+                <td><span id="kap-shift-3">{{$data['count_shift_3']}}</span> / 80</td>
                 <td><a href="{{action('InterviewController@getListPeserta', 'Shift 3 : 15.00 - 17.00')}}" target="_blank" class="btn btn-primary">View</a></td>
               </tr>
               

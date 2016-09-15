@@ -17,6 +17,9 @@ class DatabaseSeeder extends Seeder {
 		$this->call('CavisTableSeeder');
 		$this->command->info('Cavis table seeded!');
 
+		$this->call('InterviewTableSeeder');
+		$this->command->info('Interview table seeded!');
+
 	}
 
 }
