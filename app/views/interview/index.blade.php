@@ -65,7 +65,7 @@
           $('#msg').show('fast', function() {
             
           });
-          swal("Thank you!", "Anda sudah terdaftar", "success");
+          swal("Berhasil !", result.message, "success");
         }
       }); //end ajax
 
