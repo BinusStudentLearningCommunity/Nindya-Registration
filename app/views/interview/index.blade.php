@@ -101,7 +101,7 @@
       </div>
       
       <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-4">
+        <div class="col-sm-offset-2 col-sm-8">
           <button type="button" class="btn btn-primary" id="check-name">Check Name</button>
         </div>
       </div>
@@ -109,7 +109,10 @@
       <div class="form-group">
         <label for="nama" class="col-sm-2 control-label">Nama</label>
         <div class="col-sm-3">
-          <input type="text" name="nama" class="form-control" id="nama" placeholder="Nama" disabled="true"> *Pastikan nama Anda muncul
+          <input type="text" name="nama" class="form-control" id="nama" placeholder="Nama" disabled="true"> *Pastikan NIM yang Anda masukkan benar dan nama Anda muncul disini.
+        </div>
+        <div class="col-sm-6">
+          Jika nama Anda tetap tidak bisa muncul, silahkan menghubungi Nindya BSLC dan memberitahukan <b>NIM dan Nama Anda</b>.
         </div>
       </div>
       
