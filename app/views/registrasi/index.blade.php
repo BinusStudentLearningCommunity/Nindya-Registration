@@ -29,7 +29,14 @@
   </div>
 </nav>
 
+<?php 
+  $today = date_create();
+  $dueDate = date_create("2016-09-21");
+?>
+
+
 <div class="container" id="content">
+@if($today < $dueDate)
   <div class="">
     <h2>Join and Become The Next Nindya</h2> 
   </div>
@@ -267,7 +274,12 @@
 	
   </form>	
   <!-- form registrasi nya selesai-->
-</div>
+  <img src="" alt="asasd">
 
+@else
+  <h2>Maaf Pendaftaran sudah ditutup</h2>
+@endif
+
+</div>
 </body>
 </html>
