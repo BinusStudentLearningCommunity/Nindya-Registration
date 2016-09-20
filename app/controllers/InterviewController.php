@@ -54,6 +54,9 @@ class InterviewController extends \BaseController {
 		else if ($count_target_shift_interview >= 80) {
 			$data['status'] = 'error';
 			$data['message'] = 'Maaf, kapasitas pada '.$jam_interview.' sudah penuh.';
+			$data['count_shift_1'] = Interview::where('jam_interview', 'Shift 1 : 08.00 - 10.30')->count();
+			$data['count_shift_2'] = Interview::where('jam_interview', 'Shift 2 : 11.30 - 14.30')->count();
+			$data['count_shift_3'] = Interview::where('jam_interview', 'Shift 3 : 15.00 - 17.00')->count();
 			return $data;
 		}
 		else{

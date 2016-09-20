@@ -70,10 +70,10 @@
           }
           else{
             swal("Berhasil !", result.message, "success");
+          }
             $('#kap-shift-1').text(result.count_shift_1);
             $('#kap-shift-2').text(result.count_shift_2);
             $('#kap-shift-3').text(result.count_shift_3);
-          }
         }
       }); //end ajax
 
@@ -95,8 +95,13 @@
     
   </div>
 </nav>
+<?php 
+  $today = date_create();
+  $dueDate = date_create("2016-09-23 01:00:00");
+?>
   <div class="container-fluid" id="content">
     <center><h1>Jadwal Interview Calon Nindya 9G</h1></center>
+@if($today < $dueDate)
 
     <div class="col-sm-offset-1 col-sm-10">
       <p>Untuk Binusian yang sudah mendaftarkan diri menjadi calon pengurus BSLC (Nindya 9G), akan ada interview / wawancara pada tanggal <b>23 September 2016</b>. </p>
@@ -183,7 +188,9 @@
       </div>
 
     </form>
+@else
+  <h2>Maaf Pendaftaran sudah ditutup</h2>
+@endif
   </div>
-
 </body>
 </html>
