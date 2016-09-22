@@ -73,7 +73,7 @@ class InterviewController extends \BaseController {
 			}
 			
 			$data['status'] = "success";
-			$data['message'] = "Data sudah tersimpan. ".$cavis->nama." akan interview pada tanggal 23 September, ".$jam_interview;
+			$data['message'] = "Data sudah tersimpan. ".$cavis->nama." akan interview pada tanggal 25 September, ".$jam_interview;
 			$data['jam_interview'] = $jam_interview;
 			$data['count_shift_1'] = Interview::where('jam_interview', 'Shift 1 : 08.00 - 10.30')->count();
 			$data['count_shift_2'] = Interview::where('jam_interview', 'Shift 2 : 11.30 - 14.30')->count();
