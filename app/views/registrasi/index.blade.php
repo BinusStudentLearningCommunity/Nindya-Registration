@@ -31,7 +31,7 @@
 
 <?php 
   $today = date_create();
-  $dueDate = date_create("2016-09-20 01:00:00");
+  $dueDate = date_create("2016-09-22 17:00:00");
 ?>
 
 
