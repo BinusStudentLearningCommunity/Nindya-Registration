@@ -104,7 +104,7 @@
 @if($today < $dueDate)
 
     <div class="col-sm-offset-1 col-sm-10">
-      <p>Untuk Binusian yang sudah mendaftarkan diri menjadi calon pengurus BSLC (Nindya 9G), akan ada interview / wawancara pada tanggal <b>23 September 2016</b>. </p>
+      <p>Untuk Binusian yang sudah mendaftarkan diri menjadi calon pengurus BSLC (Nindya 9G), akan ada interview / wawancara pada tanggal <b>25 September 2016</b>. </p>
       <p>Daftarkan nama Anda, dan pilih salah satu dari beberapa jadwal shift interview yang sudah disediakan.</p>
     </div>
 
